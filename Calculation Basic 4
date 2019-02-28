@@ -1,0 +1,19 @@
+TaylorSwiftBorn = 1989
+MyAge = int(input('When were you born?'))
+AgeDifference = MyAge - TaylorSwiftBorn
+print("Taylor Swift is %d years older than you" % AgeDifference)
+
+
+
+JeremyBorn = 2002
+MyAge = int(input('When were you born?'))
+AgeDifference2 = MyAge - JeremyBorn
+print("Jeremy the legend is %d years older than you" % AgeDifference2)
+
+
+
+CelebrityName = input('What is the celebrity name?')
+CelebrityBorn = int(input('When were %s born?' % CelebrityName))
+MyAge = int(input('When were you born?'))
+AgeDifference3 = MyAge - CelebrityBorn
+print("%s is %d years older than you" % (CelebrityName, AgeDifference3))
