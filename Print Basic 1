@@ -1,0 +1,4 @@
+print("Hello World!")
+print(4*5)
+print(943895/43 )
+print(22/7)
