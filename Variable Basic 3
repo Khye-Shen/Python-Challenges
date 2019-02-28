@@ -1,0 +1,9 @@
+MyAge = int(input('What is your age?'))
+print('I am younger than %d' % MyAge)
+print(MyAge, "is a very nice age to be")
+
+
+ComputerAge=3.154
+ComputerName='Daniel'
+MyAge2 = int(input('What is your age again?'))
+print('I am actually older than %d, because I am %.3f year old My name is %s nice to meet you.' % (MyAge2,ComputerAge,ComputerName))
