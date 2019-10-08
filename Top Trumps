@@ -1,0 +1,84 @@
+import random
+
+print("_____________________________")
+print("WELCOME TO PLANET TO TRUMPS")
+print("_____________________________")
+planets = []
+number_of_cards1= 5
+number_of_cards2 = 5
+planets.append(["Mercury",57.9,4879,88,0])
+planets.append(["Venus",108.2,12104,224.7,0])
+planets.append(["Earth",149.6,12756,365.2,1])
+planets.append(["Mars",227.9,6792,687,2])
+planets.append(["Jupiter",778.6,142984,4331,67])
+planets.append(["Saturn",1433.5,120536,10747,62])
+planets.append(["Uranus",2872.5,51118,30589,27])
+planets.append(["Neptune",4495.1,49528,59800,14])
+planets.append(["Pluto",5906.4,2370,90560,5])
+
+while True:
+    print("Your Card:")
+    card1 = random.randint(0,len(planets)-1)
+    print("Planet: " + planets[card1][0])
+    print("Distance from the Sun: " + str(planets[card1][1])+ " million km.")
+    print("Diameter: " + str(planets[card1][2])+ " km.")
+    print("Orbital Period: " + str(planets[card1][3])+ " days.")
+    print("Number of Moons: " + str(planets[card1][4]))
+    card2 = random.randint(0,len(planets)-1)
+    choice = int(input("Which criteria do you want to choose?(1-Distance from the Sun, 2-Size, 3-Orbital Period,4-Number of Moons)"))
+    if choice == 1:
+        x = planets[card1][1]
+        y = planets[card2][1]
+        z = x-y
+        if z < 0:
+            number_of_cards1 = number_of_cards1 - 1
+            print("YOU HAVE LOST THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z == 0:
+            print("YOU HAVE TIED THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z > 0:
+            number_of_cards1 = number_of_cards1 + 1
+            print("YOU HAVE WON THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+    if choice == 2:
+        x = planets[card1][2]
+        y = planets[card2][2]
+        z = x-y
+        if z < 0:
+            number_of_cards1 = number_of_cards1 - 1
+            print("YOU HAVE LOST THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z == 0:
+            print("YOU HAVE TIED THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z > 0:
+            number_of_cards1 = number_of_cards1 + 1
+            print("YOU HAVE WON THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+
+    if choice == 3:
+        x = planets[card1][3]
+        y = planets[card2][3]
+        z = x-y
+        if z < 0:
+            number_of_cards1 = number_of_cards1 - 1
+            print("YOU HAVE LOST THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z == 0:
+            print("YOU HAVE TIED THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z > 0:
+            number_of_cards1 = number_of_cards1 + 1
+            print("YOU HAVE WON THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+
+    if choice == 4:
+        x = planets[card1][4]
+        y = planets[card2][4]
+        z = x-y
+        if z < 0:
+            number_of_cards1 = number_of_cards1 - 1
+            print("YOU HAVE LOST THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z == 0:
+            print("YOU HAVE TIED THE ROUND YOU HAVE", number_of_cards1, "CARDS REMAINING")
+        elif z > 0:
+            number_of_cards1 = number_of_cards1 + 1
+            print("YOU HAVE WON THE ROUND YOU HAVE", number_of_cards1, "REMAINING")
+    if number_of_cards1 == 10:
+        print("YOU HAVE WON")
+        break
+    if number_of_cards2 == 0:
+        print("YOU HAVE LOST")
+        break
