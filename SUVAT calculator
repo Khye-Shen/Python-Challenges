@@ -1,0 +1,31 @@
+print("1. v = u + at")
+print("2. s = 1/2(u + v)t")
+print("3. s = ut + 1/2at^2")
+print("4. s = vt - 1/2at^2")
+print("5. v^2 = u^2 + 2as")
+choice1 = int(input("What equation do you want?(see above)"))
+if choice1 == 1:
+    u = float(input("enter value for u"))
+    a = float(input("enter value for a"))
+    t = float(input("enter value for t"))
+    print( "v = ", u + a*t)
+if choice1 == 2:
+    u = float(input("enter value for u"))
+    v = float(input("enter value for v"))
+    t = float(input("enter value for t"))
+    print( "s = ", ((u+v)*t)/2)
+if choice1 == 3:
+    u = float(input("enter value for u"))
+    a = float(input("enter value for a"))
+    t = float(input("enter value for t"))
+    print( "s = ", u*t + (a*t**2)/2)
+if choice1 == 4:
+    v = float(input("enter value for v"))
+    a = float(input("enter value for a"))
+    t = float(input("enter value for t"))
+    print( "s = ", v*t - (a*t**2)/2)
+if choice1 == 5:
+    u = float(input("enter value for u"))
+    a = float(input("enter value for a"))
+    s = float(input("enter value for s"))
+    print( "v = ", (u**2 + 2*a*s)**0.5)
