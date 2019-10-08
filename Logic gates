@@ -1,0 +1,33 @@
+def nand_gate(x,y):
+    if x == 0 and y == 1:
+        return 1
+    if x == 0 and y == 0:
+        return 1
+    if x == 1 and y == 1:
+        return 0
+    if x ==1 and y == 0:
+        return 1
+
+def not_gate(x):
+    return nand_gate(x,x)
+
+def and_gate(x,y):
+    z= nand_gate(x,y)
+    return nand_gate(z,z)
+
+def or_gate(x,y):
+    a = nand_gate(x,x)
+    b = nand_gate(y,y)
+    return nand_gate(a,b)
+
+def xor_gate(x,y):
+    a = nand_gate(x,y)
+    b = nand_gate(x,a)
+    c = nand_gate(a,y)
+    return nand_gate(b,c)
+
+def nor_gate(x,y):
+    a = nand_gate(x,x)
+    b = nand_gate(y,y)
+    c = nand_gate(a,b)
+    return nand_gate(c,c)
